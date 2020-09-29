@@ -36,7 +36,7 @@ struct CircularRular: View {
         .offset(x: 360)
         .gesture(DragGesture(minimumDistance: 5)
                     .onChanged({ value in
-                        withAnimation(.easeIn(duration: 0.1)) {
+                        withAnimation(.easeInOut(duration: 0.1)) {
                             changeValue(height: value.translation.height)
                         }
                     })
